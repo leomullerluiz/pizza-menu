@@ -7,20 +7,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import {pizzaData} from './data.js';
 
-function App(){
-
-    return(
+function App() {
+    console.log(pizzaData);
+    return (
         <div>
-            <h1 className='text-3xl font-bold underline'>Pizza Menu</h1>
+            <Pizza />
+            <Pizza />
+            <Pizza />
         </div>
     );
 
 }
 
+function Pizza() {
+
+    return (
+        <div className="m-6 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+            <div className="shrink-0">
+                <img className="size-12 rounded-xl" src="pizzas/margherita.jpg" alt="{pizzaData[0].name}" />
+            </div>
+            <div>
+                <div className="text-xl font-medium text-black">{pizzaData[0].name}</div>
+                <p className="text-slate-500">{pizzaData[0].ingredients}</p>
+            </div>
+        </div>
+    );
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <App/>
+        <App />
     </React.StrictMode>
 );
