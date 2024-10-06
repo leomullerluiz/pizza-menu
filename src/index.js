@@ -14,8 +14,6 @@ function App() {
     return (
         <div>
             <Pizza />
-            <Pizza />
-            <Pizza />
         </div>
     );
 
@@ -26,7 +24,7 @@ function Pizza() {
     return (
         <div className="m-6 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
             <div className="shrink-0">
-                <img className="size-12 rounded-xl" src="pizzas/margherita.jpg" alt="{pizzaData[0].name}" />
+                <img className="size-12 rounded-xl" src={pizzaData[0].photoName} alt={pizzaData[0].name} />
             </div>
             <div>
                 <div className="text-xl font-medium text-black">{pizzaData[0].name}</div>
