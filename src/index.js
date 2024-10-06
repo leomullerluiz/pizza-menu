@@ -12,7 +12,8 @@ import {pizzaData} from './data.js';
 function App() {
     console.log(pizzaData);
     return (
-        <div>
+        <div className='bg-amber-400 h-screen flex flex-col space-y-4 pt-5'>
+            <Pizza />
             <Pizza />
         </div>
     );
@@ -22,7 +23,7 @@ function App() {
 function Pizza() {
 
     return (
-        <div className="m-6 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+        <div className="p-6 max-w-sm mx-auto bg-amber-200 rounded-xl shadow-lg flex items-center space-x-4">
             <div className="shrink-0">
                 <img className="size-12 rounded-xl" src={pizzaData[0].photoName} alt={pizzaData[0].name} />
             </div>
