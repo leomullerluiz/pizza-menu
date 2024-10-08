@@ -15,7 +15,7 @@ import Footer from './components/Footer.jsx';
 function App() {
     
     return (
-        <div className='bg-amber-400 h-screen pt-5'>
+        <div className='bg-amber-400 pt-5'>
             <Header />
 
             <Menu />
