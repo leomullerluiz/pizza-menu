@@ -1,38 +1,29 @@
 // Objetivo do projeto: 
-// Aplicar os conceitos básicos de React: components, props, jsx.
-// Criar componentes reutilizaveis.
-// Listas de renderização
-// Renderização condicional
+//      Aplicar os conceitos básicos de React: components, props, jsx.
+//      Criar componentes reutilizaveis.
+//      Listas de renderização
+//      Renderização condicional
 // -----------------------------------------------------------------------------
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {pizzaData} from './data.js';
+import Header from './components/Header.jsx';
+import Menu from './components/Menu.jsx';
+import Footer from './components/Footer.jsx';
+
 
 function App() {
-    console.log(pizzaData);
+    
     return (
-        <div className='bg-amber-400 h-screen flex flex-col space-y-4 pt-5'>
-            <Pizza />
-            <Pizza />
+        <div className='bg-amber-400 h-screen pt-5'>
+            <Header />
+
+            <Menu />
+
+            <Footer />
         </div>
     );
 
-}
-
-function Pizza() {
-
-    return (
-        <div className="p-6 max-w-sm mx-auto bg-amber-200 rounded-xl shadow-lg flex items-center space-x-4">
-            <div className="shrink-0">
-                <img className="size-12 rounded-xl" src={pizzaData[0].photoName} alt={pizzaData[0].name} />
-            </div>
-            <div>
-                <div className="text-xl font-medium text-black">{pizzaData[0].name}</div>
-                <p className="text-slate-500">{pizzaData[0].ingredients}</p>
-            </div>
-        </div>
-    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
