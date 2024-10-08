@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Pizza App
+
+Project objective:
+Apply the basic concepts of React: components, props, jsx.
+Create reusable components.
+Render Lists
+Conditional rendering
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
