@@ -3,16 +3,14 @@ import Pizza from './Pizza.jsx';
 import { pizzaData } from '../data.js';
 
 export default function Menu() {
-    
+
     return (
-        <div className='flex flex-col space-y-4 min-h-screen'>
-            <div>
-                {
-                    pizzaData.map((pizza) => (
-                        <Pizza pizzaObj={pizza} />
-                    ))
-                }
-            </div>
+        <div className='grid grid-cols-4 gap-4'>
+            {
+                pizzaData.map((pizza) => (
+                    <Pizza pizzaObj={pizza} key={pizza.name} />
+                ))
+            }
         </div>
     );
 }

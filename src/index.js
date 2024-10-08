@@ -13,13 +13,15 @@ import Footer from './components/Footer.jsx';
 
 
 function App() {
-    
+
     return (
         <div className='bg-amber-400 pt-5'>
-            <Header />
-
-            <Menu />
-
+            <div className='container mx-auto'>
+                <Header />
+                <main className="py-8 min-h-screen">
+                    <Menu />
+                </main>
+            </div>
             <Footer />
         </div>
     );

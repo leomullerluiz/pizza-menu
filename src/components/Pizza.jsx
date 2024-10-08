@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default function Pizza(props){
+export default function Pizza(props) {
 
     return (
-        
-        <div className="p-6 mt-3 w-80 mx-auto bg-amber-200 rounded-xl shadow-lg flex items-center space-x-4 ">
-            {console.log(props)}
+        <div className="p-6 mt-3 mx-auto bg-amber-200 rounded-xl shadow-lg flex items-center space-x-4 ">
             <div className="shrink-0">
                 <img className="size-12 rounded-xl" src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
             </div>
